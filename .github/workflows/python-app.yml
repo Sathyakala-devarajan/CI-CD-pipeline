@@ -37,3 +37,17 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: checkout code
+        uses: actions/checkouts@v4
+ 
+      - name: deploy for production
+        run: 
+          echo "Starting deployment..."
+       
