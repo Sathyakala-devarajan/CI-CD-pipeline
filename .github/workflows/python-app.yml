@@ -45,9 +45,9 @@ jobs:
 
     steps:
       - name: checkout code
-        uses: actions/checkouts@v4
+        uses: actions/checkout@v4
  
       - name: deploy for production
-        run: 
+        run: |
           echo "Starting deployment..."
        
